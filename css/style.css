@@ -2,6 +2,12 @@
     display: flex;
 }
 
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .graph {
     min-height: 0;
     width: 75%;
@@ -17,7 +23,7 @@
     align-items: center;
 }
 
-#controls {
+.controls {
     text-align: center;
     flex: 33.33%;
 }

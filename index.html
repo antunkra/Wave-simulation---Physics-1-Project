@@ -9,34 +9,39 @@
         <noscript>To use this site, please enable JavaScript.</noscript>
 
         <div class="row">
-            <div class"column" id="graphs">
+            <div class="column" id="graphs">
                 <h3>Graf 1</h3>
                 <canvas class="graph" id="testWave" width="1000" height="500"></canvas>
                 <h3>Graf 2</h3>
                 <canvas class="graph" id="forcedWave" width="1000" height="500"></canvas>
             </div>
-            <div id="controls">
+            <div class="column">
+                <div class="controls">
                 <h3>Kontrole</h3>
                 <div class="attributeControl">
                     <label>Amplituda:</label>
                     <input type="range" min="50" max="250" value="200" class="slider" id="amplitudeSlider">
-                    <label class="sliderValueLabel" id="amplitudeValueLabel">200 m</label>
+                    <label class="sliderValueLabel" id="amplitudeValueLabel">200 px</label>
                 </div>
                 <div class="attributeControl">
                     <label>Frekvencija:</label>
-                    <input type="range" min="500" max="2000" value="1000" class="slider" id="frequencySlider">
+                    <input type="range" min="500" max="1000" value="1000" class="slider" id="frequencySlider">
                     <label class="sliderValueLabel" id="frequencyValueLabel">1000 mHz</label>
                 </div>
                 <div class="attributeControl">
                     <label>Valna duljina:</label>
-                    <input type="range" min="100" max="700" value="300" class="slider" id="wavelengthSlider">
-                    <label class="sliderValueLabel" id="wavelengthValueLabel">300 m</label>
+                    <input type="range" min="100" max="300" value="300" class="slider" id="wavelengthSlider">
+                    <label class="sliderValueLabel" id="wavelengthValueLabel">300 px</label>
                 </div>
+            </div>
+            <div class="controls">
+                <button id="stopButton">Stop</button>
+                <button id="endSwapButton">Free End</button>
             </div>
         </div>
 
+        <script src="./js/ui.js"></script>
         <script src="./js/testWave.js"></script>
         <script src="./js/forcedWave.js"></script>
-        <script src="./js/ui.js"></script>
     </body>
 </html>
