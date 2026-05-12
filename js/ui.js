@@ -1,10 +1,10 @@
 window.startTime = performance.now();
 window.numOfPoints = 200;
-window.k = 2 * Math.PI / 300;
+window.k = 2 * Math.PI / 250;
 window.w = 2 * Math.PI;
 window.amplitude = 200;
 window.frequency = 1;
-window.waveLength = 300;
+window.waveLength = 250;
 const dx = 1000 / window.numOfPoints;
 let velocity = window.w / window.k;
 window.springConstant = Math.pow(velocity, 2) / dx;
@@ -24,19 +24,23 @@ const endSwapButton = document.getElementById("endSwapButton");
 function updateSpringConstant() {
     velocity = window.w / window.k;
     window.springConstant = Math.pow(velocity, 2) / dx;
+    simulationGraph.func.springConstant = window.springConstant;
 }
 
 stopButton.onclick = function() {
     if (stopButton.innerHTML === "Stop") {
         stopButton.innerHTML = "Restart";
         window.paused = true;
-        testWaveGraph.paused = true;
+        formulaGraph.paused = true;
+        simulationGraph.paused = true;
     }
     else {
         stopButton.innerHTML = "Stop";
         window.paused = false;
-        testWaveGraph.paused = false;
-        testWaveGraph.reset();
+        formulaGraph.paused = false;
+        formulaGraph.reset();
+        simulationGraph.paused = false;
+        simulationGraph.reset();
         window.startTime = performance.now();
     }
 }

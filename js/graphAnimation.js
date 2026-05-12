@@ -48,5 +48,12 @@ class GraphAnimation {
 
     set paused(value) {
         this._paused = value;
+        if (value == true) {
+            this._func.reset();
+        }
+    }
+
+    get func() {
+        return this._func;
     }
 }
