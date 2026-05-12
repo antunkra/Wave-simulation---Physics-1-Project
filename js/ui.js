@@ -30,10 +30,13 @@ stopButton.onclick = function() {
     if (stopButton.innerHTML === "Stop") {
         stopButton.innerHTML = "Restart";
         window.paused = true;
+        testWaveGraph.paused = true;
     }
     else {
         stopButton.innerHTML = "Stop";
         window.paused = false;
+        testWaveGraph.paused = false;
+        testWaveGraph.reset();
         window.startTime = performance.now();
     }
 }
