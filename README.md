@@ -1,4 +1,4 @@
-Simple wave visualization project for my Physics 1 class.
+Simple wave visualization project for my Physics 1 course.
 
 The goal of this interactive visualization is to show 2 things:
 1. visually showing that the classical wave equation correctly describes a sinusoidal wave
